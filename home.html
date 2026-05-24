@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Aayush Karbhal | Portfolio</title>
+    <script>
+      // This allows Tailwind's "dark:" classes to work with your custom class name
+      tailwind.config = {
+        darkMode: ["class", ".dark-mode"],
+      };
+    </script>
+    <style>
+      body {
+        transition:
+          background-color 0.4s ease,
+          color 0.4s ease;
+      }
+
+      :root {
+        --bg-color: #fbfbfb;
+        --text-color: #1a1a1a;
+        --card-bg: #ffffff;
+        --card-border: #e5e7eb;
+      }
+
+      .dark-mode {
+        --bg-color: #0a0a0a;
+        --text-color: #f3f4f6;
+        --card-bg: #141414;
+        --card-border: #262626;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: "Inter", sans-serif;
+      }
+
+      .glass-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--card-border);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .glass-card:hover {
+        border-color: #6366f1;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+        transform: translateY(-4px);
+      }
+
+      .accent-text {
+        background: linear-gradient(to right, #6366f1, #a855f7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .dark-mode footer {
+        border-top-color: #262626;
+      }
+    </style>
+  </head>
+  <body class="p-8 md:p-16">
+    <nav class="flex justify-between items-start mb-24">
+      <div class="flex flex-col">
+        <div
+          class="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-none"
+        >
+          Aayush<span class="text-indigo-600"> KARBHAL</span>
+        </div>
+        <span
+          class="text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-indigo-500 mt-3 leading-none opacity-80"
+        >
+          Computer Science Undergraduate | AIML
+        </span>
+      </div>
+
+      <div class="flex items-center space-x-8">
+        <div
+          class="hidden md:flex space-x-12 text-xs uppercase tracking-widest font-bold text-gray-400"
+        >
+          <a
+            href="work.html"
+            class="hover:text-black dark:hover:text-white transition-colors"
+            >Work</a
+          >
+          <a
+            href="about.html"
+            class="hover:text-black dark:hover:text-white transition-colors"
+            >About</a
+          >
+          <a
+            href="about.html#contact"
+            class="hover:text-black dark:hover:text-white transition-colors"
+            >Contact</a
+          >
+        </div>
+
+        <button
+          id="themeToggle"
+          class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 dark:border-zinc-800 hover:bg-gray-100 dark:hover:bg-zinc-800 transition-all"
+        >
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </nav>
+
+    <header class="max-w-4xl mb-32">
+      <h1
+        class="text-5xl md:text-8xl font-bold leading-tight mb-8 tracking-tight"
+      >
+        CODE, <span class="accent-text">DATA</span>, DESIGN
+      </h1>
+      <p
+        class="text-gray-500 text-xl max-w-2xl leading-relaxed border-l-2 border-gray-200 dark:border-zinc-800 pl-6"
+      >
+        Building skills in Python, Flask, and Machine Learning fundamentals.
+        Actively seeking internship opportunities to contribute to real-world
+        projects and grow through hands-on experience.
+      </p>
+    </header>
+
+    <section id="work" class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <div
+        onclick="window.open('https://logivison-3eav.vercel.app/', '_blank')"
+        class="md:col-span-8 p-12 glass-card rounded-3xl group cursor-pointer relative overflow-hidden"
+      >
+        <div class="relative z-10">
+          <div class="flex items-center gap-3">
+            <span
+              class="text-xs uppercase tracking-widest text-indigo-500 font-mono"
+              >01. Project</span
+            >
+            <span
+              class="px-2 py-0.5 bg-indigo-100 text-indigo-600 text-[10px] font-bold uppercase rounded-md border border-indigo-200"
+              >Full-Stack MERN</span
+            >
+          </div>
+          <h2 class="text-4xl mt-4 font-bold tracking-tight">Logivision AI</h2>
+          <p class="mt-4 text-gray-500 max-w-md">
+            Full-Stack MERN Application featuring a Split-Cloud Deployment using
+            Vercel and Render, JWT-based stateless authentication, and a
+            Glassmorphism interface.
+          </p>
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <span
+              class="text-xs font-bold px-3 py-1 bg-gray-100 dark:bg-zinc-800 rounded-full transition-colors"
+              >React</span
+            >
+            <span
+              class="text-xs font-bold px-3 py-1 bg-gray-100 dark:bg-zinc-800 rounded-full transition-colors"
+              >Node.js</span
+            >
+            <span
+              class="text-xs font-bold px-3 py-1 bg-gray-100 dark:bg-zinc-800 rounded-full transition-colors"
+              >MongoDB</span
+            >
+            <span
+              class="text-xs font-bold px-4 py-1.5 ml-auto bg-indigo-50 dark:bg-zinc-900 text-indigo-600 rounded-full group-hover:bg-indigo-600 group-hover:text-white transition-all"
+            >
+              View Project ↗
+            </span>
+          </div>
+        </div>
+        <span
+          class="absolute right-[0px] bottom-[-20px] text-[120px] font-black text-gray-50 dark:text-zinc-900 opacity-[0.2] group-hover:opacity-[0.4] transition-opacity"
+          >MERN</span
+        >
+      </div>
+
+      <div
+        class="md:col-span-4 p-12 glass-card rounded-3xl group bg-black !text-white border-none"
+      >
+        <span class="text-xs uppercase tracking-widest text-gray-500"
+          >02. Skills</span
+        >
+        <h2 class="text-3xl mt-4 font-bold">Tech Stack</h2>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span
+            class="px-3 py-1 bg-white/10 rounded-full text-[10px] uppercase font-bold"
+            >Python</span
+          >
+          <span
+            class="px-3 py-1 bg-white/10 rounded-full text-[10px] uppercase font-bold"
+            >Java</span
+          >
+          <span
+            class="px-3 py-1 bg-white/10 rounded-full text-[10px] uppercase font-bold"
+            >HTML/CSS</span
+          >
+          <span
+            class="px-3 py-1 bg-white/10 rounded-full text-[10px] uppercase font-bold"
+            >Flask</span
+          >
+          <span
+            class="px-3 py-1 bg-white/10 rounded-full text-[10px] uppercase font-bold"
+            >NumPy & Pandas</span
+          >
+          <span
+            class="px-3 py-1 bg-white/10 rounded-full text-[10px] uppercase font-bold"
+            >Git/GitHub</span
+          >
+        </div>
+      </div>
+
+      <div
+        onclick="window.open('https://sign-lang-learnn.vercel.app', '_blank')"
+        class="md:col-span-12 p-12 glass-card rounded-3xl group cursor-pointer relative overflow-hidden"
+      >
+        <div
+          class="relative z-10 flex flex-col md:flex-row justify-between items-start gap-6"
+        >
+          <div class="flex-1 w-full">
+            <div class="flex items-center gap-3">
+              <span
+                class="text-xs uppercase tracking-widest text-indigo-500 font-mono"
+                >03. Project</span
+              >
+              <span
+                class="px-2 py-0.5 bg-emerald-100 text-emerald-600 text-[10px] font-bold uppercase rounded-md border border-emerald-200"
+                >Accessibility</span
+              >
+            </div>
+            <h2 class="text-4xl mt-4 font-bold tracking-tight">Sign Learn</h2>
+            <p class="mt-4 text-gray-500 max-w-2xl">
+              An inclusive, accessible platform designed for deaf
+              student-teacher interaction. Built with a minimal frontend
+              utilizing larger fonts for enhanced readability, and features
+              dedicated video-sharing capabilities for seamless learning.
+            </p>
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <span
+                class="text-xs font-bold px-3 py-1 bg-gray-100 dark:bg-zinc-800 rounded-full transition-colors"
+                >React (Vite)</span
+              >
+              <span
+                class="text-xs font-bold px-3 py-1 bg-gray-100 dark:bg-zinc-800 rounded-full transition-colors"
+                >Flask</span
+              >
+              <span
+                class="text-xs font-bold px-4 py-1.5 md:ml-auto bg-indigo-50 dark:bg-zinc-900 text-indigo-600 rounded-full group-hover:bg-indigo-600 group-hover:text-white transition-all"
+              >
+                View Project ↗
+              </span>
+            </div>
+          </div>
+        </div>
+        <span
+          class="absolute right-[-20px] bottom-[-30px] text-[150px] font-black text-gray-50 dark:text-zinc-900 opacity-[0.2] group-hover:opacity-[0.4] transition-opacity"
+          >VITE</span
+        >
+      </div>
+
+      <div
+        onclick="window.location.href = 'about.html'"
+        class="md:col-span-4 p-12 glass-card rounded-3xl group cursor-pointer"
+      >
+        <span class="text-xs uppercase tracking-widest text-gray-400"
+          >04. Philosophy</span
+        >
+        <h2 class="text-3xl mt-4 font-bold">About Me</h2>
+        <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+          Based in Kurla, Mumbai, I am a 2nd year BE (AIML) student at
+          Vasantdada Patil College of Engineering with a CGPA of 7.92.
+        </p>
+      </div>
+
+      <div
+        class="md:col-span-8 p-12 glass-card rounded-3xl group flex justify-between items-center overflow-hidden"
+      >
+        <div>
+          <span class="text-xs uppercase tracking-widest text-gray-400"
+            >05. Education</span
+          >
+          <h2 class="text-3xl mt-2 font-bold tracking-tight">
+            Vasantdada Patil Pratishthan's College of Engineering
+          </h2>
+          <p class="text-indigo-500 font-medium">
+            BE Computer Science Engineering (AIML)
+          </p>
+          <p class="text-gray-400 text-sm mt-1">
+            Current CGPA: 7.92 | 2024 – 2028
+          </p>
+        </div>
+        <div
+          class="hidden sm:flex h-24 w-24 bg-indigo-50 dark:bg-zinc-900 rounded-2xl items-center justify-center rotate-12 group-hover:rotate-0 transition-transform"
+        >
+          <span class="text-4xl">🎓</span>
+        </div>
+      </div>
+
+      <div
+        onclick="window.location.href = 'work.html'"
+        class="md:col-span-8 p-12 glass-card rounded-3xl group cursor-pointer flex justify-between items-center overflow-hidden relative"
+      >
+        <div class="relative z-10">
+          <div class="flex items-center gap-3">
+            <span class="text-xs uppercase tracking-widest text-gray-400"
+              >06. Experience</span
+            >
+            <span
+              class="px-2 py-0.5 bg-blue-100 text-blue-600 text-[10px] font-bold uppercase rounded-md border border-blue-200"
+              >Internship</span
+            >
+          </div>
+          <h2 class="text-3xl mt-4 font-bold tracking-tight">
+            AIML Intern <span class="text-indigo-500">@ Elevate Labs</span>
+          </h2>
+          <p class="mt-4 text-gray-500 max-w-md text-sm leading-relaxed">
+            Completed core machine learning tasks and built 3 mini-projects from
+            scratch focusing on practical AI applications.
+          </p>
+          <div
+            class="mt-6 font-bold text-xs text-indigo-600 group-hover:translate-x-2 transition-transform"
+          >
+            View Details ↗
+          </div>
+        </div>
+        <div
+          class="hidden sm:flex h-24 w-24 bg-blue-50 dark:bg-zinc-900 rounded-2xl items-center justify-center rotate-12 group-hover:rotate-0 transition-transform z-10"
+        >
+          <span class="text-4xl">🧠</span>
+        </div>
+      </div>
+
+      <div
+        onclick="
+          window.open(
+            'https://www.kaggle.com/learn/certification/aayushkarbhal/python',
+            '_blank',
+          )
+        "
+        class="md:col-span-4 p-12 glass-card rounded-3xl group cursor-pointer border-dashed border-2 flex flex-col justify-between relative overflow-hidden"
+      >
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span
+              class="text-xs uppercase tracking-widest text-indigo-500 font-mono"
+              >07. Cert</span
+            >
+            <span
+              class="px-2 py-0.5 bg-rose-100 text-rose-600 text-[10px] font-bold uppercase rounded-md border border-rose-200 animate-pulse"
+              >Recent</span
+            >
+          </div>
+          <h2 class="text-2xl font-bold tracking-tight">Kaggle Python</h2>
+          <p class="mt-2 text-gray-500 text-sm">
+            Validated proficiency in Python syntax and data structures.
+          </p>
+        </div>
+        <div
+          class="mt-8 font-bold text-xs text-indigo-600 group-hover:translate-x-2 transition-transform"
+        >
+          Verify ↗
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="mt-32 py-12 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-6"
+    >
+      <p class="text-gray-400 text-sm font-medium">© 2026 Aayush Karbhal.</p>
+      <div
+        class="flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-600"
+      >
+        <a
+          href="https://linkedin.com/in/aayushkarbhal"
+          target="_blank"
+          class="hover:text-indigo-600"
+          >LinkedIn</a
+        >
+        <a
+          href="https://github.com/Aayushkarbhal"
+          target="_blank"
+          class="hover:text-indigo-600"
+          >GitHub</a
+        >
+        <a href="about.html#contact" class="hover:text-indigo-600">Email</a>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById("themeToggle");
+      const icon = document.getElementById("themeIcon");
+      const body = document.body;
+
+      btn.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        icon.innerText = body.classList.contains("dark-mode") ? "☀️" : "🌙";
+        localStorage.setItem(
+          "theme",
+          body.classList.contains("dark-mode") ? "dark" : "light",
+        );
+      });
+
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        icon.innerText = "☀️";
+      }
+    </script>
+  </body>
+</html>

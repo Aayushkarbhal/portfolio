@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Work | Aayush Karbhal</title>
+    <style>
+      body {
+        background-color: #fbfbfb;
+        color: #1a1a1a;
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .glass-card {
+        background: white;
+        border: 1px solid #e5e7eb;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .accent-text {
+        background: linear-gradient(to right, #6366f1, #a855f7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Video scaling effect */
+      .video-wrapper:hover video {
+        transform: scale(1.05);
+      }
+
+      video {
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      /* Instagram Cover Logic */
+      .insta-cover {
+        transition:
+          opacity 0.4s ease,
+          visibility 0.4s;
+      }
+      .insta-cover.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #6366f1;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body class="p-8 md:p-16">
+    <nav class="mb-24 flex justify-between items-start">
+      <a href="home.html" class="flex flex-col group">
+        <div
+          class="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-none group-hover:text-indigo-600 transition-colors"
+        >
+          Aayush<span class="text-indigo-600 group-hover:text-black">
+            KARBHAL</span
+          >
+        </div>
+        <span
+          class="text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-indigo-500 mt-3 leading-none"
+        >
+          ← Back to Home
+        </span>
+      </a>
+    </nav>
+
+    <main class="max-w-7xl mx-auto">
+      <section class="mb-32">
+        <div class="flex items-center gap-4 mb-10">
+          <span
+            class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400"
+            >01 / Engineering</span
+          >
+        </div>
+
+        <div class="flex flex-col gap-8">
+          <div
+            class="glass-card p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden shadow-sm"
+          >
+            <div
+              class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+            >
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <span
+                    class="px-3 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-bold uppercase rounded-full border border-indigo-100"
+                    >Completed</span
+                  >
+                </div>
+                <h2 class="text-4xl font-bold mb-6 tracking-tight">
+                  Logivision AI
+                </h2>
+                <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                  Full-Stack MERN Application featuring a Split-Cloud Deployment
+                  using Vercel and Render. Implemented JWT-based stateless
+                  authentication on all protected routes [cite: 25] and built a
+                  Glassmorphism interface[cite: 28].
+                </p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                  <span
+                    class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase rounded-md"
+                    >React</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase rounded-md"
+                    >Node.js</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase rounded-md"
+                    >MongoDB</span
+                  >
+                </div>
+                <a
+                  href="https://logivison-3eav.vercel.app/"
+                  target="_blank"
+                  class="inline-flex items-center text-xs font-black uppercase tracking-widest text-indigo-600 hover:gap-3 transition-all"
+                >
+                  View Live Project <span class="ml-2">→</span>
+                </a>
+              </div>
+              <div class="hidden lg:block">
+                <div
+                  class="aspect-video bg-indigo-50 rounded-2xl border border-indigo-100 flex items-center justify-center p-12"
+                >
+                  <span
+                    class="text-indigo-200 font-black text-6xl tracking-tighter"
+                    >MERN</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="glass-card p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden shadow-sm"
+          >
+            <div
+              class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+            >
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <span
+                    class="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-bold uppercase rounded-full border border-emerald-100"
+                    >Accessibility</span
+                  >
+                </div>
+                <h2 class="text-4xl font-bold mb-6 tracking-tight">
+                  Sign Learn
+                </h2>
+                <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                  An inclusive platform designed for deaf student-teacher
+                  interaction. Built with a minimal frontend utilizing larger
+                  fonts for enhanced readability and video-sharing capabilities.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                  <span
+                    class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase rounded-md"
+                    >React (Vite)</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-gray-100 text-[10px] font-bold uppercase rounded-md"
+                    >Flask</span
+                  >
+                </div>
+                <a
+                  href="https://sign-lang-learnn.vercel.app"
+                  target="_blank"
+                  class="inline-flex items-center text-xs font-black uppercase tracking-widest text-emerald-600 hover:gap-3 transition-all"
+                >
+                  View Live Project <span class="ml-2">→</span>
+                </a>
+              </div>
+              <div class="hidden lg:block">
+                <div
+                  class="aspect-video bg-emerald-50 rounded-2xl border border-emerald-100 flex items-center justify-center p-12"
+                >
+                  <span
+                    class="text-emerald-200 font-black text-6xl tracking-tighter"
+                    >VITE</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <section class="mb-32">
+        <div class="flex items-center gap-4 mb-10">
+          <span
+            class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400"
+            >02 / Experience</span
+          >
+        </div>
+
+        <div
+          class="glass-card p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden shadow-sm"
+        >
+          <div
+            class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase rounded-full border border-blue-100"
+                  >Internship</span
+                >
+              </div>
+              <h2 class="text-4xl font-bold mb-2 tracking-tight">
+                AIML Intern
+              </h2>
+              <h3 class="text-xl font-medium text-indigo-600 mb-6">
+                Elevate Labs
+              </h3>
+              <p class="text-gray-500 text-lg leading-relaxed mb-8">
+                Completed core machine learning tasks and built
+                <span class="text-black font-semibold"
+                  >3 mini-projects from scratch</span
+                >, focusing on applying artificial intelligence concepts to
+                practical scenarios.
+              </p>
+
+              <div class="flex flex-col sm:flex-row gap-6 mb-4">
+                <a
+                  href="https://github.com/Aayushkarbhal/jupyter-notebooks-internship-tasks"
+                  target="_blank"
+                  class="inline-flex items-center text-xs font-black uppercase tracking-widest text-blue-600 hover:gap-3 transition-all"
+                >
+                  View GitHub Repo 1 <span class="ml-2">→</span>
+                </a>
+                <a
+                  href="https://github.com/Aayushkarbhal/mini-project-aiml"
+                  target="_blank"
+                  class="inline-flex items-center text-xs font-black uppercase tracking-widest text-blue-600 hover:gap-3 transition-all"
+                >
+                  View GitHub Repo 2 <span class="ml-2">→</span>
+                </a>
+              </div>
+            </div>
+            <div class="hidden lg:block">
+              <div
+                class="aspect-video bg-blue-50 rounded-2xl border border-blue-100 flex items-center justify-center p-12"
+              >
+                <code class="text-blue-500 text-sm"
+                  >import pandas as pd<br />import numpy as np<br /><br />#
+                  Intern @ Elevate Labs<br /># Projects built: 3<br /># Status:
+                  Completed</code
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-32">
+        <div class="mb-12">
+          <span
+            class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400"
+            >03 / Creative Production</span
+          >
+          <h2 class="text-5xl font-bold mt-2 tracking-tight">
+            Short Form <span class="accent-text">Content</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="flex flex-col gap-4">
+            <a
+              href="https://www.instagram.com/reel/DV0d3q8iP2_/?igsh=MXQ3ZWZsZWNwem4zZQ=="
+              target="_blank"
+              class="group block"
+            >
+              <div
+                class="aspect-[9/16] glass-card rounded-[2rem] overflow-hidden shadow-lg relative"
+              >
+                <img
+                  src="p1.jpg"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  alt="Reel Cover 1"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all flex flex-col items-center justify-center"
+                >
+                  <div
+                    class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 mb-3 group-hover:scale-110 transition-transform"
+                  >
+                    <span class="text-white text-xl">▶</span>
+                  </div>
+                  <span
+                    class="text-white text-[10px] font-black uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity"
+                    >Open Instagram</span
+                  >
+                </div>
+              </div>
+            </a>
+            <div class="px-2 text-center">
+              <p
+                class="text-[10px] font-bold uppercase tracking-widest text-gray-400"
+              >
+                Instagram Edit 01
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <a
+              href="https://www.instagram.com/reel/DOvLry2iEiS/"
+              target="_blank"
+              class="group block"
+            >
+              <div
+                class="aspect-[9/16] glass-card rounded-[2rem] overflow-hidden shadow-lg relative"
+              >
+                <img
+                  src="p2.jpg"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  alt="Reel Cover 2"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all flex flex-col items-center justify-center"
+                >
+                  <div
+                    class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 mb-3 group-hover:scale-110 transition-transform"
+                  >
+                    <span class="text-white text-xl">▶</span>
+                  </div>
+                  <span
+                    class="text-white text-[10px] font-black uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity"
+                    >Open Instagram</span
+                  >
+                </div>
+              </div>
+            </a>
+            <div class="px-2 text-center">
+              <p
+                class="text-[10px] font-bold uppercase tracking-widest text-gray-400"
+              >
+                Instagram Edit 02
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <div
+              class="aspect-[9/16] bg-black rounded-[2rem] overflow-hidden relative group shadow-2xl video-wrapper"
+            >
+              <video
+                id="v1"
+                class="w-full h-full object-cover cursor-pointer"
+                muted
+                loop
+                playsinline
+                onmouseover="this.play()"
+                onmouseout="
+                  this.pause();
+                  this.currentTime = 0;
+                "
+                onclick="this.muted = !this.muted"
+              >
+                <source src="v1.mp4" type="video/mp4" />
+              </video>
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all pointer-events-none flex items-center justify-center"
+              >
+                <span
+                  class="text-white/70 text-[10px] font-bold uppercase tracking-widest border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm group-hover:opacity-0 transition-opacity"
+                  >Hover to Play</span
+                >
+              </div>
+            </div>
+            <div class="px-2 text-center">
+              <p
+                class="text-[10px] font-bold uppercase tracking-widest text-gray-400"
+              >
+                Local Edit v1 (Muted)
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <div
+              class="aspect-[9/16] bg-black rounded-[2rem] overflow-hidden relative group shadow-2xl video-wrapper"
+            >
+              <video
+                id="v2"
+                class="w-full h-full object-cover cursor-pointer"
+                muted
+                loop
+                playsinline
+                onmouseover="this.play()"
+                onmouseout="
+                  this.pause();
+                  this.currentTime = 0;
+                "
+                onclick="this.muted = !this.muted"
+              >
+                <source src="v2.mp4" type="video/mp4" />
+              </video>
+              <div
+                class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all pointer-events-none flex items-center justify-center"
+              >
+                <span
+                  class="text-white/70 text-[10px] font-bold uppercase tracking-widest border border-white/30 px-4 py-2 rounded-full backdrop-blur-sm group-hover:opacity-0 transition-opacity"
+                  >Hover to Play</span
+                >
+              </div>
+            </div>
+            <div class="px-2 text-center">
+              <p
+                class="text-[10px] font-bold uppercase tracking-widest text-gray-400"
+              >
+                Local Edit v2 (Muted)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-20 pb-20 text-center border-t border-gray-100 pt-10">
+      <p class="text-gray-400 text-[10px] font-bold uppercase tracking-[0.4em]">
+        Aayush Karbhal • Portfolio 2026
+      </p>
+    </footer>
+  </body>
+</html>
